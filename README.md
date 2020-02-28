@@ -15,7 +15,6 @@ The path were the secret is written to or read from is automatically calculated 
 ```
 module "vault_secret" {
   source      = "git@github.com:3scale/tf-vault-secret.git?ref=tags/0.1.0"
-  context     = module.user_label.context
   write       = true
   scope       = "teams"
   owner       = "operations"
@@ -77,7 +76,6 @@ All the options available for write operations are available for read as well. J
 ```
 module "vault_secret" {
   source      = "git@github.com:3scale/tf-vault-secret.git?ref=tags/0.1.0"
-  context     = module.user_label.context
   scope       = "teams"
   owner       = "operations"
   environment = local.environment
