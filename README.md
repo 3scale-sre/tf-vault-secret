@@ -32,7 +32,7 @@ module "vault_secret" {
 * Passing the full set of labels (context) of an already defined label. This is the preferred way as it keeps the names/labes of the resource with the path were its related secret is storer.
 
 ```
-module "label" {
+module "user_label" {
   source      = "git@github.com:3scale/tf-aws-label.git?ref=tags/0.1.1"
   environment = local.environment
   project     = local.project
