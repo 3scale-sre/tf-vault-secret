@@ -8,7 +8,7 @@ locals {
 }
 
 module "secret_label" {
-  source              = "git@github.com:3scale/tf-aws-label.git?ref=tags/0.1.1"
+  source              = "git@github.com:3scale/tf-aws-label.git?ref=tags/0.1.2"
   project             = var.project
   environment         = var.environment
   workload            = var.workload
