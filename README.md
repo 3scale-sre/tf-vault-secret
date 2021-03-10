@@ -114,7 +114,19 @@ module "vault_secret" {
 
 Outputs are only relevant when `write` is `false`, in which case the module functions like a data.
 
-| Output | Description |
-|--------|-------------|
+| Output | Description                                       |
+| ------ | ------------------------------------------------- |
 | value  | The sensitive value stored at the given Vaut path |
-| path   | The full Vault path were the value is stored |
+| path   | The full Vault path were the value is stored      |
+
+## Contributing
+
+You can contribute by:
+
+* Raising any issues you find using the operator
+* Fixing issues by opening [Pull Requests](https://github.com/3scale/tf-vault-secrets/pulls)
+* Submitting a patch or opening a PR
+* Improving documentation
+* Talking about the operator
+
+All bugs, tasks or enhancements are tracked as [GitHub issues](https://github.com/3scale/tf-vault-secrets/issues).
