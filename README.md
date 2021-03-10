@@ -1,6 +1,6 @@
 # tf-vault-secret
 
-[![latest](https://github.com/3scale-ops/tf-vault-secret/workflows/test/badge.svg)](https://github.com/3scale-ops/tf-vault-secret/actions/workflows/test.yaml?query=workflow%3Atest)
+[![format-tests](https://github.com/3scale-ops/tf-vault-secret/workflows/format-tests/badge.svg)](https://github.com/3scale-ops/tf-vault-secret/actions/workflows/format-tests.yaml?query=workflow%3Aformat-tests)
 [![license](https://badgen.net/github/license/3scale-ops/tf-vault-secret)](https://github.com/3scale-ops/tf-vault-secret/blob/main/LICENSE)
 
 This module tries to standarize the way we store secrets in the KeyValueV2 Vault's storage engine. It leverages the existent naming convention and implemented in https://github.com/3scale-ops/tf-aws-label to create secrets in a consistent way.
