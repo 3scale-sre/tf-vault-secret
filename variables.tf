@@ -5,14 +5,14 @@ variable "write" {
 }
 
 variable "path" {
-    type = string
-    default = ""
-    description = "The path of the secret. If not specified, it will be constructed from the rest of parameters. To be used when override is required"
+  type        = string
+  default     = ""
+  description = "The path of the secret. If not specified, it will be constructed from the rest of parameters. To be used when override is required"
 }
 
 variable "mount_path" {
-  type = string
-  default = "secret"
+  type        = string
+  default     = "secret"
   description = "The base path were the KeyValueV2 secret engine is mounted"
 }
 

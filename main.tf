@@ -22,9 +22,9 @@ module "secret_label" {
 }
 
 resource "vault_generic_secret" "write" {
-  count = var.write ? 1 : 0
-  path  = local.full_path
-  data_json  = var.value
+  count     = var.write ? 1 : 0
+  path      = local.full_path
+  data_json = var.value
 }
 
 data "vault_generic_secret" "read" {
