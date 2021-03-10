@@ -28,6 +28,6 @@ resource "vault_generic_secret" "write" {
 }
 
 data "vault_generic_secret" "read" {
-  count = "${var.write ? 0 : 1}"
+  count = var.write ? 0 : 1
   path  = local.full_path
 }
