@@ -127,9 +127,9 @@ Outputs are only relevant when `write` is `false`, in which case the module func
 You can contribute by:
 
 * Raising any issues you find using the operator
-* Fixing issues by opening [Pull Requests](https://github.com/3scale-ops/tf-vault-secrets/pulls)
+* Fixing issues by opening [Pull Requests](https://github.com/3scale-ops/tf-vault-secret/pulls)
 * Submitting a patch or opening a PR
 * Improving documentation
 * Talking about the operator
 
-All bugs, tasks or enhancements are tracked as [GitHub issues](https://github.com/3scale-ops/tf-vault-secrets/issues).
+All bugs, tasks or enhancements are tracked as [GitHub issues](https://github.com/3scale-ops/tf-vault-secret/issues).
