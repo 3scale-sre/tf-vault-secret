@@ -1,9 +1,9 @@
 # tf-vault-secret
 
-[![latest](https://github.com/3scale-ops/tf-vault-secret/workflows/latest/badge.svg)](https://github.com/3scale/tf-vault-secret/actions/workflows/test.yaml?query=workflow%3Atest)
-[![license](https://badgen.net/github/license/3scale/tf-vault-secret)](https://github.com/3scale/tf-vault-secret/blob/main/LICENSE)
+[![format-tests](https://github.com/3scale-ops/tf-vault-secret/workflows/format-tests/badge.svg)](https://github.com/3scale-ops/tf-vault-secret/actions/workflows/format-tests.yaml?query=workflow%3Aformat-tests)
+[![license](https://badgen.net/github/license/3scale-ops/tf-vault-secret)](https://github.com/3scale-ops/tf-vault-secret/blob/main/LICENSE)
 
-This module tries to standarize the way we store secrets in the KeyValueV2 Vault's storage engine. It leverages the existent naming convention and implemented in https://github.com/3scale/tf-aws-label to create secrets in a consistent way.
+This module tries to standarize the way we store secrets in the KeyValueV2 Vault's storage engine. It leverages the existent naming convention and implemented in https://github.com/3scale-ops/tf-aws-label to create secrets in a consistent way.
 
 ## How does it work
 
@@ -17,7 +17,7 @@ The path were the secret is written to or read from is automatically calculated 
 
 ```
 module "vault_secret" {
-  source      = "git@github.com:3scale/tf-vault-secret.git?ref=tags/0.1.0"
+  source      = "git@github.com:3scale-ops/tf-vault-secret.git?ref=tags/0.1.0"
   write       = true
   scope       = "teams"
   owner       = "operations"
@@ -36,7 +36,7 @@ module "vault_secret" {
 
 ```
 module "user_label" {
-  source      = "git@github.com:3scale/tf-aws-label.git?ref=tags/0.1.1"
+  source      = "git@github.com:3scale-ops/tf-aws-label.git?ref=tags/0.1.1"
   environment = local.environment
   project     = local.project
   workload    = local.workload
@@ -45,7 +45,7 @@ module "user_label" {
 }
 
 module "vault_secret" {
-  source  = "git@github.com:3scale/tf-vault-secret.git?ref=tags/0.1.0"
+  source  = "git@github.com:3scale-ops/tf-vault-secret.git?ref=tags/0.1.0"
   context = module.user_label.context
   write   = true
   scope   = "teams"
@@ -61,7 +61,7 @@ module "vault_secret" {
 
 ```
 module "vault_secret" {
-  source  = "/home/roi/github.com/3scale/tf-vault-secret"
+  source  = "/home/roi/github.com/3scale-ops/tf-vault-secret"
   context = module.user_label.context
   write   = true
   path    = "some/path/in/vault"
@@ -78,7 +78,7 @@ All the options available for write operations are available for read as well. J
 
 ```
 module "vault_secret" {
-  source      = "git@github.com:3scale/tf-vault-secret.git?ref=tags/0.1.0"
+  source      = "git@github.com:3scale-ops/tf-vault-secret.git?ref=tags/0.1.0"
   scope       = "teams"
   owner       = "operations"
   environment = local.environment
@@ -90,7 +90,7 @@ module "vault_secret" {
 
 ```
 module "label" {
-  source      = "git@github.com:3scale/tf-aws-label.git?ref=tags/0.1.1"
+  source      = "git@github.com:3scale-ops/tf-aws-label.git?ref=tags/0.1.1"
   environment = local.environment
   project     = local.project
   workload    = local.workload
@@ -99,7 +99,7 @@ module "label" {
 }
 
 module "vault_secret" {
-  source  = "git@github.com:3scale/tf-vault-secret.git?ref=tags/0.1.0"
+  source  = "git@github.com:3scale-ops/tf-vault-secret.git?ref=tags/0.1.0"
   context = module.user_label.context
   scope   = "teams"
   owner   = "operations"
@@ -108,7 +108,7 @@ module "vault_secret" {
 
 ```
 module "vault_secret" {
-  source  = "git@github.com:3scale/tf-vault-secret.git?ref=tags/0.1.0"
+  source  = "git@github.com:3scale-ops/tf-vault-secret.git?ref=tags/0.1.0"
   path    = "some/path/in/vault"
 }
 ```
@@ -127,9 +127,9 @@ Outputs are only relevant when `write` is `false`, in which case the module func
 You can contribute by:
 
 * Raising any issues you find using the operator
-* Fixing issues by opening [Pull Requests](https://github.com/3scale/tf-vault-secrets/pulls)
+* Fixing issues by opening [Pull Requests](https://github.com/3scale-ops/tf-vault-secrets/pulls)
 * Submitting a patch or opening a PR
 * Improving documentation
 * Talking about the operator
 
-All bugs, tasks or enhancements are tracked as [GitHub issues](https://github.com/3scale/tf-vault-secrets/issues).
+All bugs, tasks or enhancements are tracked as [GitHub issues](https://github.com/3scale-ops/tf-vault-secrets/issues).
