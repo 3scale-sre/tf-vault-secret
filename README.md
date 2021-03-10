@@ -1,5 +1,7 @@
 # tf-vault-secret
 
+[![license](https://badgen.net/github/license/3scale/tf-vault-secret)](https://github.com/3scale/tf-vault-secret/blob/master/LICENSE)
+
 This module tries to standarize the way we store secrets in the KeyValueV2 Vault's storage engine. It leverages the existent naming convention and implemented in https://github.com/3scale/tf-aws-label to create secrets in a consistent way.
 
 ## How does it work
