@@ -5,10 +5,10 @@ help: ## Print this help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 install-test-tools: ## Install test dependencies
-	go get github.com/dmitry-at-hyla/liche
+	GO111MODULE=on go get github.com/raviqqe/liche
 
-update-test-tools: ## Upadte test dependencies
-	go get -u github.com/dmitry-at-hyla/liche
+update-test-tools: ## Update test dependencies
+	GO111MODULE=on go get -u github.com/raviqqe/liche
 
 test: test-docs test-terraform ## Run all tests
 
